@@ -171,26 +171,33 @@
     }
 
     .featured-image {
-      position: relative;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 20px;
-      overflow: hidden;
+    position: relative;
+    width: 100%;         /* يملى عرض البطاقة بالكامل */
+    height: 350px;       /* نفس ارتفاع كل البطاقة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.1); /* لون خفيف خلف الصورة */
+    border-radius: 25px;  /* حواف مدورة أكثر جاذبية */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* ظل خفيف */
     }
 
     .featured-image img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
-      transition: transform 0.5s;
-      filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.2));
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;  /* يحافظ على نسب الصورة */
+    transition: transform 0.5s, filter 0.5s;
+    filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.2));
+    border-radius: 20px;  /* يجعل الصورة نفسها أيضاً مدورة */
     }
 
-    .featured-card:hover .featured-image img { transform: scale(1.1); }
+    .featured-card:hover .featured-image img {
+    transform: scale(1.1); /* تكبير بسيط عند المرور */
+    filter: drop-shadow(0 15px 25px rgba(212, 175, 55, 0.3));
+    }
+
 
     .bottle-label {
       position: absolute;
